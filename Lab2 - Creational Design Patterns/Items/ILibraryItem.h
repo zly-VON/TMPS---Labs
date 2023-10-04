@@ -7,6 +7,7 @@ class ILibraryItem
 {
     public:
         virtual void displayInfo() const = 0;
+        virtual void displayFullInfo() const = 0;
         virtual std::string getTitle() const = 0;
         // virtual ~ILibraryItem() {}
 };

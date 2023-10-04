@@ -7,7 +7,8 @@ class ILibraryItemBuilder
 {
 public:
     virtual void buildTitle(const std::string& title) = 0;
-    virtual void buildCreator(const std::string& creator) = 0;;
+    virtual void buildCreator(const std::string& creator) = 0;
+    virtual void buildDate(const std::string& dateOfRelease) = 0;
     virtual ILibraryItem* getResult() = 0;
 };
 

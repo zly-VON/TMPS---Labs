@@ -11,7 +11,12 @@ void DVDBuilder::buildCreator(const std::string& director)
     this->director = director;
 }
 
+void DVDBuilder::buildDate(const std::string& dateOfRelease) 
+{
+    this->dateOfRelease = dateOfRelease;
+}
+
 ILibraryItem* DVDBuilder::getResult() 
 {
-    return new DVD(title, director);
+    return new DVD(title, director, dateOfRelease);
 }

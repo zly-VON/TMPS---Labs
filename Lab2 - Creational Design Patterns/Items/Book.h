@@ -7,15 +7,17 @@
 
 class Book : public ILibraryItem, public ILibraryItemPrototype
 {
-    private:
-        std::string title;
-        std::string author;
+private:
+    std::string title;
+    std::string author;
+    std::string dateOfRelease;
 
-    public:
-        Book(const std::string& title, const std::string& author);
-        void displayInfo() const override;
-        std::string getTitle() const override;
-        ILibraryItemPrototype* clone() const override;
+public:
+    Book(const std::string &title, const std::string &author, const std::string &dateOfRelease);
+    void displayInfo() const override;
+    void displayFullInfo() const override;
+    std::string getTitle() const override;
+    ILibraryItemPrototype *clone() const override;
 };
 
 #endif // BOOK_H

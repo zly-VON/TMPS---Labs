@@ -6,7 +6,8 @@
 class LibraryItemDirector 
 {
 public:
-    ILibraryItem* construct(ILibraryItemBuilder& builder, const std::string& title, const std::string& creator = "");
+    ILibraryItem* constructBook(ILibraryItemBuilder& builder, const std::string& title, const std::string& author = "", const std::string &dateOfRelease = "");
+    ILibraryItem* constructDVD(ILibraryItemBuilder& builder, const std::string& title, const std::string& director = "", const std::string &dateOfRelease = "");
 };
 
 #endif // LIBRARYITEMDIRECTOR_H
