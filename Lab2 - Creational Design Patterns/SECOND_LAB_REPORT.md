@@ -63,7 +63,6 @@ ILibraryItem* LibraryItemDirector::constructBook(ILibraryItemBuilder& builder, c
 class ILibraryItemPrototype {
 public:
     virtual ILibraryItemPrototype* clone() const = 0;
-    virtual void displayInfo() const = 0;
     virtual ~ILibraryItemPrototype() {}
 };
 ```
