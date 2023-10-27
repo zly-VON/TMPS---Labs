@@ -85,15 +85,15 @@ public:
 * __Proxy__ -  The Proxy pattern is used to provide a surrogate or placeholder for another object to control access to it.
     * *LibraryProxy* class: defines tracks access counts, logs interactions, and controls access to the underlying ILibraryItem.
 ```cpp
-ILibraryItem* LibraryItemFactory::createBook(const std::string& title, const std::string& author, const std::string &dateOfRelease) 
+void LibraryProxy::logInteraction(const std::string& action) const 
 {
-    return new Book(title, author, dateOfRelease);
+    std::cout << "\nLogged: Library Member performed action '" << action << "' on item '"
+                << realItem->getTitle() << "'" << std::endl;
 }
 
-ILibraryItem* LibraryItemFactory::createDVD(const std::string& title, const std::string& director, const std::string &dateOfRelease) 
+void LibraryProxy::getAccessCount() 
 {
-    return new DVD(title, director, dateOfRelease);
-}
+    std::cout << "Access Count on item '" << realItem->getTitle() << "'" << ": " << accessCount << std::endl;
 ```
 
 ## Results
