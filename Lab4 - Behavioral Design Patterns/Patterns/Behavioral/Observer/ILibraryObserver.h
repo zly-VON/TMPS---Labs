@@ -1,5 +1,3 @@
-// ILibraryObserver.h
-
 #ifndef ILIBRARYOBSERVER_H
 #define ILIBRARYOBSERVER_H
 

@@ -26,7 +26,8 @@ void CommandQueue::printBooksInQueue() const
     if (commands.empty()) 
     {
         std::cout << "No books in the queue." << std::endl;
-    } else 
+    } 
+    else 
     {
         for (const ILibraryCommand* command : *this) 
         {

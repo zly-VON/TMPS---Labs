@@ -7,7 +7,8 @@
 #include "../../../Items/ILibraryItem.h"
 #include <algorithm>
 
-class SortByTitle : public IStrategy {
+class SortByTitle : public IStrategy 
+{
 public:
     std::string getStrategyName() const override;
     void sort(std::vector<ILibraryItem*>& items) const override;

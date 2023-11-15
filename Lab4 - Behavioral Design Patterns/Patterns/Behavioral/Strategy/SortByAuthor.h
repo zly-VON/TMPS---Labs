@@ -4,7 +4,8 @@
 
 #include "IStrategy.h"
 
-class SortByAuthor : public IStrategy {
+class SortByAuthor : public IStrategy 
+{
 public:
     std::string getStrategyName() const override;
     void sort(std::vector<ILibraryItem*>& items) const override;

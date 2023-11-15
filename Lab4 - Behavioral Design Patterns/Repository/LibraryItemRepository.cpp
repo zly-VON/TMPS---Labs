@@ -57,22 +57,27 @@ std::vector<ILibraryItem*> LibraryItemRepository::findItemByAuthor(const std::st
     return itemsByAuthor;
 }
 
-std::vector<ILibraryItem*> LibraryItemRepository::getAllLibraryItems() const {
+std::vector<ILibraryItem*> LibraryItemRepository::getAllLibraryItems() const 
+{
     std::vector<ILibraryItem*> items;
 
-    for (const auto& entry : libraryItems) {
+    for (const auto& entry : libraryItems) 
+    {
         items.push_back(entry.second);
     }
 
     return items;
 }
 
-void LibraryItemRepository::setSortingStrategy(IStrategy* strategy) {
+void LibraryItemRepository::setSortingStrategy(IStrategy* strategy) 
+{
     sortingStrategy = strategy;
 }
 
-void LibraryItemRepository::sortItems(std::vector<ILibraryItem*>& items) const {
-    if (sortingStrategy) {
+void LibraryItemRepository::sortItems(std::vector<ILibraryItem*>& items) const 
+{
+    if (sortingStrategy) 
+    {
         sortingStrategy->sort(items);
     }
 }

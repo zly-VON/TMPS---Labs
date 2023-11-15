@@ -1,5 +1,3 @@
-// CommandQueue.h
-
 #ifndef COMMANDQUEUE_H
 #define COMMANDQUEUE_H
 

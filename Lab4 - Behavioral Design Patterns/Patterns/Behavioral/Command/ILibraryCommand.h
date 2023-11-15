@@ -1,5 +1,3 @@
-// ILibraryCommand.h
-
 #ifndef ILIBRARYCOMMAND_H
 #define ILIBRARYCOMMAND_H
 

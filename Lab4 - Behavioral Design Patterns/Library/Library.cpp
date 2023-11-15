@@ -9,11 +9,13 @@ void Library::displayInfo() const
     std::cout << "Library Info: " << name << " at " << address << std::endl;
 }
 
-void Library::displayLibraryItems() const {
+void Library::displayLibraryItems() const 
+{
     std::cout << "\nLibrary Items: " << std::endl;
     const std::vector<ILibraryItem*>& items = itemRepository.getAllLibraryItems();
 
-    for (const ILibraryItem* item : items) {
+    for (const ILibraryItem* item : items) 
+    {
         item->displayInfo();
     }
 
@@ -54,7 +56,8 @@ void Library::processCommandQueue()
     commandQueue.executeCommands();
 }
 
-void Library::displaySortedBooks(IStrategy* sortingStrategy) const {
+void Library::displaySortedBooks(IStrategy* sortingStrategy) const 
+{
     std::vector<ILibraryItem*> items = itemRepository.getAllLibraryItems();
 
     if (sortingStrategy) {
